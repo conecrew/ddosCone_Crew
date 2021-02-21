@@ -4,7 +4,7 @@ pip install argparse o pip3 install argparse
 pip install sys o pip3 install sys
 
 
-Para utilizarla en python con linux en la terminal: python3 --target "IP" --port "port"
+Para utilizarla en python con linux en la terminal: python3 ddosCone_Crew.py --target "IP" --port "port"
 Windows utilizando IDE de spyder python 3.8 se corre en la terminal del mismo, estando el archivo en el directorio especificado: 
 run ddosCone_Crew.py --target "ip" --port "port" 
 Se le pude dejar sin poner el argumento --port en cualquier SO e ira a atacar directo al especificado en el puerto del codigo fuente, se le puede modificar desde el codigo tambien. 
